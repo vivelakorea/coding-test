@@ -1,3 +1,3 @@
 # coding test
 
-preparing for coding test
+1 problem / day
