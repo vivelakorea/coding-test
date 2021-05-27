@@ -10,6 +10,8 @@
 
 - algorithm-interview/linear-data-structure/array/trap.py
 
+- algorithm-interview/linear-data-structure/linked-list/mergeTwoLists.py (재귀 풀이)
+
 ## tip
 
 - 문자열을 i 이상 j 미만으로 슬라이싱 한 후 반대로 뒤집기:
