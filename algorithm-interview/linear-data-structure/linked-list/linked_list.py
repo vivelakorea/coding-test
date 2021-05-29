@@ -14,7 +14,7 @@ class ListNode:
 
 def list_to_linked_list(l):
     if not l:
-        return ListNode()
+        return None
     root = cur = ListNode(l[0])
     for i in range(1, len(l)):
         cur.next = ListNode(l[i])
