@@ -5,7 +5,6 @@ class MyCircularQueue:
         self.p1 = 0
         self.p2 = 0
 
-    # enQueue(): 리어 포인터 이동
     def enQueue(self, value: int) -> bool:
         if self.q[self.p2] is None:
             self.q[self.p2] = value
@@ -14,7 +13,6 @@ class MyCircularQueue:
         else:
             return False
 
-    # deQueue(): 프론트 포인터 이동
     def deQueue(self) -> bool:
         if self.q[self.p1] is None:
             return False
