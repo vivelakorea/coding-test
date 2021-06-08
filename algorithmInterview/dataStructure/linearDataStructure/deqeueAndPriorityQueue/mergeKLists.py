@@ -26,7 +26,7 @@ class Solution:
         h = []
         for i, l in enumerate(lists):
             if l:
-                heapq.heappush(h, (l.val, i, l)) # l 자체는 비교연산이 안되기 때문에 그 앞에 무조권 같지 않은 대소관계가 있는 i를 넣어줘야 함
+                heapq.heappush(h, (l.val, i, l)) # l 자체는 비교연산이 안되기 때문에 그 앞에 무조건 같지 않은 대소관계가 있는 i를 넣어줘야 함
         root = res = ListNode(None)
         while h:
             _, idx, node = heapq.heappop(h)
