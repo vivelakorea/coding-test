@@ -2,6 +2,35 @@
 
 1 problem / day
 
+## folders
+
+```
+.
+└── algorithmInterview
+    ├── algorithm
+    │   ├── binarySearch
+    │   ├── bitManipulation
+    │   ├── divideAndConquer
+    │   │   ├── dynamic
+    │   │   └── greedy
+    │   ├── slidingWindow
+    │   └── sort
+    └── dataStructure
+        ├── linearDataStructure
+        │   ├── array
+        │   ├── deqeueAndPriorityQueue
+        │   ├── hash
+        │   ├── linkedList
+        │   │   └── __pycache__
+        │   └── stackAndQueue
+        ├── nonLinearDataStructure
+        │   ├── heap
+        │   ├── shortestPath
+        │   ├── tree
+        │   └── trie
+        └── string
+```
+
 ## 오답
 
 - algroithm-interview/data-structure/string/longestPalindrome.py
