@@ -15,7 +15,10 @@ class Sort:
         self.mix()
         s += 'before sort:\t{}\n'.format(self.arr)
         s += 'quick sort:\t{}\n\n'.format(self.quickSort(self.arr, 0, len(self.arr) - 1))
-
+        self.mix()
+        s += 'before sort:\t{}\n'.format(self.arr)
+        s += 'insertion sort:\t{}\n\n'.format(self.insertionSort(self.arr))
+        
         return s
         
     def mix(self):
@@ -78,8 +81,18 @@ class Sort:
             self.quickSort(arr, p + 1, right)
         return arr
 
-for _ in range(5):
-    arr = [i for i in range(10)] * 2 + [i for i in range(10, 20)]
+    def insertionSort(self, arr):
+        for i in range(1, len(arr)):
+            j = 0
+            while arr[i] > arr[j]:
+                j += 1
+            tmp = arr[i]
+            arr[j + 1:i + 1] = arr[j:i]
+            arr[j] = tmp
+        return arr
+
+for i in range(10):
+    arr = [j for j in range(i)] + [j for j in range(i // 2)]
     random.shuffle(arr)
     s = Sort(arr)
     print(s)
