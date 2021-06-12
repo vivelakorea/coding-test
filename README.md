@@ -32,15 +32,17 @@
 
 ## 오답
 
-- algroithm-interview/data-structure/string/longestPalindrome.py
+- algroithmInterview/dataStructure/string/longestPalindrome.py
 
-- algroithm-interview/data-structure/non-linear-data-structure/tree/maxDepth.py (root가 None인 경우 오류 날 수 있었음)
+- algroithmInterview/dataStructure/nonLinearDataStructure/tree/maxDepth.py (root가 None인 경우 오류 날 수 있었음)
 
-- algorithm-interview/data-structure/linear-data-structure/array/trap.py
+- algorithmInterview/dataStructure/linearDataStructure/array/trap.py
 
-- algorithm-interview/data-structure/linear-data-structure/linked-list/mergeTwoLists.py (재귀 풀이)
+- algorithmInterview/dataStructure/linearDataStructure/linkedList/mergeTwoLists.py (재귀 풀이)
 
-- algorithm-interview/data-structure/linear-data-structure/stack-and-queue/removeDuplicateLetters.py (https://www.youtube.com/watch?v=nsnpeb_0Hfw)
+- algorithmInterview/dataStructure/linearDataStructure/stackAndQueue/removeDuplicateLetters.py (https://www.youtube.com/watch?v=nsnpeb_0Hfw)
+
+- algorithmInterview/algorithm/sort/insertionSortList.py (간소화, 최적화)
 
 ## tip
 
