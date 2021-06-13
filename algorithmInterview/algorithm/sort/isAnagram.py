@@ -5,7 +5,6 @@ class Solution:
             hashed1 += hash(c)
         for c in t:
             hashed2 += hash(c)
-        print(hashed1, hashed2)
         return hashed1 == hashed2
 
 s = Solution()
