@@ -91,8 +91,31 @@ class Sort:
             arr[j] = tmp
         return arr
 
-for i in range(10):
-    arr = [j for j in range(i)] + [j for j in range(i // 2)]
-    random.shuffle(arr)
-    s = Sort(arr)
-    print(s)
+    def threeWayPartition(self, arr, mid):
+        i, j, k = 0, 0, len(arr)
+        def printPosition():
+            print(*arr)
+            print('  ' * i + 'i')
+            print('  ' * j + 'j')
+            print('  ' * k + 'k')
+        while j < k:
+            # printPosition()
+            if arr[j] < mid:
+                arr[i], arr[j] = arr[j], arr[i]
+                i += 1
+                j += 1
+            elif arr[j] > mid:
+                k -= 1
+                arr[j], arr[k] = arr[k], arr[j]
+            else:
+                j += 1
+
+
+# for i in range(10):
+#     arr = [j for j in range(i)] + [j for j in range(i // 2)]
+#     random.shuffle(arr)
+#     s = Sort(arr)
+#     print(s)
+
+s = Sort([0, 1, 2, 2, 1, 0, 1, 2, 2, 1, 0, 2, 2, 1, 1, 1, 0, 0, 0, 1, 2, 0])
+s.threeWayPartition(s.arr, 1)
