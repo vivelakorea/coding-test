@@ -6,28 +6,30 @@
 
 ```
 .
-└── algorithmInterview
-    ├── algorithm
-    │   ├── binarySearch
-    │   ├── bitManipulation
-    │   ├── divideAndConquer
-    │   │   ├── dynamic
-    │   │   └── greedy
-    │   ├── slidingWindow
-    │   └── sort
-    └── dataStructure
-        ├── linearDataStructure
-        │   ├── array
-        │   ├── deqeueAndPriorityQueue
-        │   ├── hash
-        │   ├── linkedList
-        │   └── stackAndQueue
-        ├── nonLinearDataStructure
-        │   ├── heap
-        │   ├── shortestPath
-        │   ├── tree
-        │   └── trie
-        └── string
+├── algorithmInterview
+│   ├── algorithm
+│   │   ├── binarySearch
+│   │   ├── bitManipulation
+│   │   ├── divideAndConquer
+│   │   │   ├── dynamic
+│   │   │   └── greedy
+│   │   ├── slidingWindow
+│   │   └── sort
+│   └── dataStructure
+│       ├── linearDataStructure
+│       │   ├── array
+│       │   ├── deqeueAndPriorityQueue
+│       │   ├── hash
+│       │   ├── linkedList
+│       │   │   └── __pycache__
+│       │   └── stackAndQueue
+│       ├── nonLinearDataStructure
+│       │   ├── heap
+│       │   ├── shortestPath
+│       │   ├── tree
+│       │   └── trie
+│       └── string
+└── baekjoon
 ```
 
 ## 오답
@@ -43,6 +45,10 @@
 - algorithmInterview/dataStructure/linearDataStructure/stackAndQueue/removeDuplicateLetters.py (https://www.youtube.com/watch?v=nsnpeb_0Hfw)
 
 - algorithmInterview/algorithm/sort/insertionSortList.py (간소화, 최적화)
+
+- algorithmInterview/algorithm/slidingWindow/maxSlidingWindow.py (time limit exceeded)
+
+- algorithmInterview/algorithm/slidingWindow/minWindow.py (스파게티코드)
 
 ## tip
 
