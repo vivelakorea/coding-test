@@ -2,9 +2,7 @@ class Solution:
     def parenthesisScore(self, line):
         char_stack = []
         score_stack = [0]
-
-        balanced = True
-
+        
         ref = {
             ')': ('(', 2),
             ']': ('[', 3)
