@@ -11,8 +11,8 @@
 │   │   ├── binarySearch
 │   │   ├── bitManipulation
 │   │   ├── divideAndConquer
-│   │   │   ├── dynamic
-│   │   │   └── greedy
+│   │   ├── dynamic
+│   │   ├── greedy
 │   │   ├── slidingWindow
 │   │   └── sort
 │   └── dataStructure
@@ -29,7 +29,8 @@
 │       │   ├── tree
 │       │   └── trie
 │       └── string
-└── baekjoon
+├── baekjoon
+└── dataScienceIntro
 ```
 
 ## 오답
@@ -55,3 +56,5 @@
 - 문자열을 i 이상 j 미만으로 슬라이싱 한 후 반대로 뒤집기:
 
   s[i:j][::-1]
+
+- 분할정복할때 반으로 쪼개는거면 merge(conquer)할때 O(N)만 해도 이득임 (O(N^2) -> O(NlogN)일때)

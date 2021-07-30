@@ -1,11 +1,10 @@
-from typing import List
-                
-def P3(grid: List[List[str]]) -> int:
+
+def P3(world: list) -> int:
     
     remain = set() # set of all coordinates(tuple) of 1 that isn't visited
-    for r in range(len(grid)):
-        for c in range(len(grid[0])):
-            if grid[r][c]:
+    for r in range(len(world)):
+        for c in range(len(world[0])):
+            if world[r][c]:
                 remain.add((r, c))
 
     
@@ -40,6 +39,6 @@ def P3(grid: List[List[str]]) -> int:
     return count
     
 
-print(P3([[1,1,1,1,0], [1,0,0,1,0], [1,1,0,1,0], [1,1,0,0,0]]))
-print(P3([[1,1,0,0,0], [1,1,0,0,0], [0,0,1,1,0], [0,0,0,0,1]]))
-print(P3([[0,1,0,1,0,1]]))
+# print(P3([[1,1,1,1,0], [1,0,0,1,0], [1,1,0,1,0], [1,1,0,0,0]]))
+# print(P3([[1,1,0,0,0], [1,1,0,0,0], [0,0,1,1,0], [0,0,0,0,1]]))
+# print(P3([[0,1,0,1,0,1]]))

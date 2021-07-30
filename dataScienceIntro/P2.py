@@ -11,6 +11,6 @@ def P2(s: str) -> int:
     
     return -1
 
-print(P2('loveprogram'))
-print(P2('llooveeprogram'))
-print(P2('computingfoundationfordatascience'))
+# print(P2('loveprogram'))
+# print(P2('llooveeprogram'))
+# print(P2('computingfoundationfordatascience'))
