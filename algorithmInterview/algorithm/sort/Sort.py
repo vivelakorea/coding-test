@@ -1,5 +1,5 @@
 from typing import List
-import random
+import random, sys
 
 class Sort:
     def __init__(self, arr: List):
@@ -9,6 +9,9 @@ class Sort:
         s = ''
         s += 'before sort:\t{}\n'.format(self.arr)
         s += 'bubble sort:\t{}\n\n'.format(self.bubbleSort(self.arr))
+        self.mix()
+        s += 'before sort:\t{}\n'.format(self.arr)
+        s += 'selection sort:\t{}\n\n'.format(self.selectionSort(self.arr))
         self.mix()
         s += 'before sort:\t{}\n'.format(self.arr)
         s += 'merge sort:\t{}\n\n'.format(self.mergeSort(self.arr))
@@ -31,6 +34,15 @@ class Sort:
                     arr[j], arr[j+1] = arr[j+1], arr[j]
         return arr
     
+    def selectionSort(self, arr: List) -> List:
+        for i in range(len(arr) - 1):
+            min_idx = i
+            for j in range(i + 1, len(arr)):
+                if arr[j] < arr[min_idx]:
+                    min_idx = j
+            arr[i], arr[min_idx] = arr[min_idx], arr[i]
+        return arr
+
     def merge(self, arr1: List, arr2: List) -> List:
             merged = []
             p1, p2 = 0, 0
@@ -42,13 +54,9 @@ class Sort:
                     merged.append(arr2[p2])
                     p2 += 1
             if p1 == len(arr1):
-                while p2 < len(arr2):
-                    merged.append(arr2[p2])
-                    p2 +=1 
+                merged += arr2[p2:]
             else:
-                while p1 < len(arr1):
-                    merged.append(arr1[p1])
-                    p1 +=1 
+                merged += arr1[p1:]
             return merged
 
     def mergeSort(self, arr) -> List:
@@ -83,12 +91,12 @@ class Sort:
 
     def insertionSort(self, arr):
         for i in range(1, len(arr)):
-            j = 0
-            while arr[i] > arr[j]:
-                j += 1
-            tmp = arr[i]
-            arr[j + 1:i + 1] = arr[j:i]
-            arr[j] = tmp
+            a = i - 1
+            b = i
+            while a >= 0 and arr[a] > arr[b]:
+                arr[a], arr[b] = arr[b], arr[a]
+                a -= 1
+                b -= 1
         return arr
 
     def threeWayPartition(self, arr, mid):
@@ -111,11 +119,11 @@ class Sort:
                 j += 1
 
 
-# for i in range(10):
-#     arr = [j for j in range(i)] + [j for j in range(i // 2)]
-#     random.shuffle(arr)
-#     s = Sort(arr)
-#     print(s)
+for i in range(100):
+    arr = [j for j in range(i)] + [j for j in range(i // 2)]
+    random.shuffle(arr)
+    s = Sort(arr)
+    print(s)
 
-s = Sort([0, 1, 2, 2, 1, 0, 1, 2, 2, 1, 0, 2, 2, 1, 1, 1, 0, 0, 0, 1, 2, 0])
-s.threeWayPartition(s.arr, 1)
+# s = Sort([0, 1, 2, 2, 1, 0, 1, 2, 2, 1, 0, 2, 2, 1, 1, 1, 0, 0, 0, 1, 2, 0])
+# s.threeWayPartition(s.arr, 1)
