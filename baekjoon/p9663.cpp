@@ -4,7 +4,7 @@ using namespace std;
 
 int N, res = 0;
 
-void dfs(int N, int row, int eachRowPosition[]) {
+void dfs(int row, int eachRowPosition[]) {
     if (row == N) {
         res++;
         return;
@@ -23,7 +23,7 @@ void dfs(int N, int row, int eachRowPosition[]) {
         }
         if (canPlace) {
             eachRowPosition[row] = i;
-            dfs(N, row + 1, eachRowPosition);
+            dfs(row + 1, eachRowPosition);
         }
     }
 }
@@ -31,6 +31,6 @@ void dfs(int N, int row, int eachRowPosition[]) {
 int main() {
     cin >> N;
     int eachRowPosition[N];
-    dfs(N, 0, eachRowPosition);
+    dfs(0, eachRowPosition);
     cout << res << '\n';
 }
