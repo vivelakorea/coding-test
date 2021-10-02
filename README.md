@@ -51,6 +51,8 @@
 
 - algorithmInterview/algorithm/slidingWindow/minWindow.py (스파게티코드)
 
+- p9461 왠지는 모르겠는데 vector<long long> 했을때 범위 안넘어가는데도 오버플로우됨
+
 ## tip
 
 - 문자열을 i 이상 j 미만으로 슬라이싱 한 후 반대로 뒤집기:

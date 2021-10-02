@@ -4,7 +4,7 @@
 using namespace std;
 int N, S[20][20], minimum = 100 * 20 * 20;
 
-void dfs(vector<int> start) {
+void dfs(vector<int> &start) {
     // cout << "start ";
     // for (int i = 0; i < (int)start.size(); i++) {
     //     cout << start[i] << ' ';
