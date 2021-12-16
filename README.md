@@ -21,7 +21,6 @@
 │       │   ├── deqeueAndPriorityQueue
 │       │   ├── hash
 │       │   ├── linkedList
-│       │   │   └── __pycache__
 │       │   └── stackAndQueue
 │       ├── nonLinearDataStructure
 │       │   ├── heap
