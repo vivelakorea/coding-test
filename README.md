@@ -1,7 +1,5 @@
 # coding test
 
-1 problem / day
-
 ## folders
 
 ```
@@ -21,7 +19,6 @@
 │       │   ├── deqeueAndPriorityQueue
 │       │   ├── hash
 │       │   ├── linkedList
-│       │   │   └── __pycache__
 │       │   └── stackAndQueue
 │       ├── nonLinearDataStructure
 │       │   ├── heap
