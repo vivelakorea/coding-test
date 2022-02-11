@@ -3,22 +3,22 @@ class DiscreteSurface:
   def __init__(self):
     self.surfaces = {}
 
-  def add_surface(self, elem_id, square_points):
+  def add_surface(self, elem_id, quadrangle_points):
     """
     Add one surface.
     Arguments
       elem_id : id of NAND part's element that have the surface
-      square_points : 
+      quadrangle_points : 
         [(x1, y1, z1), (x2, y2, z2), (x3, y3, z3), (x4, y4, z4)] 
         four nodes of the surface
     """
-    self.surfaces[elem_id] = square_points[:] # avoid shallow copy
+    self.surfaces[elem_id] = quadrangle_points[:] # avoid shallow copy
   
-  def point_in_square(self, square_points, point):
+  def point_in_quadrangle(self, quadrangle_points, point):
     """
     Check if the 2d point is in 2d sqaure
     Arguments:
-      square_points : [(x1,y1),(x2,y2), (x3,y3), (x4,y4)]
+      quadrangle_points : [(x1,y1),(x2,y2), (x3,y3), (x4,y4)]
       point : (x,y)
     It doesn't mean that only xy plane can be used. 
     yz, zx plane can be used as well.
@@ -48,8 +48,8 @@ class DiscreteSurface:
     areas = []
 
     for i in range(4):
-      p1 = square_points[i%4]
-      p2 = square_points[(i+1)%4]
+      p1 = quadrangle_points[i%4]
+      p2 = quadrangle_points[(i+1)%4]
 
       # point on edge
       if _point_on_line(p1, p2, point):
@@ -86,14 +86,14 @@ class DiscreteSurface:
     point = (y,z)
 
     for surface in self.surfaces.values():
-      square_points = [
+      quadrangle_points = [
         (surface[0][1],surface[0][2]),
         (surface[1][1],surface[1][2]),
         (surface[2][1],surface[2][2]),
         (surface[3][1],surface[3][2]),
       ]
 
-      if self.point_in_square(square_points, point):
+      if self.point_in_quadrangle(quadrangle_points, point):
         # This follows http://www.gisdeveloper.co.kr/?p=801 's formula
         x1, y1, z1 = surface[0]
         x2, y2, z2 = surface[1]
