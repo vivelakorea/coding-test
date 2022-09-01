@@ -4,4 +4,4 @@ _ = input()
 cards_shown = list(input().split())
 res = map(lambda x: str(int((x in cards_sangun_possess))) + ' ', cards_shown)
 
-print(''.join(list(res)))
+print(''.join(list(res))[:-1])
